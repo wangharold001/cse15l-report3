@@ -54,7 +54,7 @@ The first reason the code was buggy was that the initial values in the array wer
 
 The grep command returns the results of a search for a RegEx pattern in a directory.
 
-The -h command prints out the lines from a document or a directory that match the RegEx expression. This can be used as a "Ctrl+F" to find expressions and sentences containing relevant words in a document. I read about this option for the grep command from the geeksforgeeks webpage https://www.geeksforgeeks.org/grep-command-in-unixlinux/#.
+The -h command prints out the lines from a document or a directory that match the RegEx expression without displaying the file name. This option is useful if all of the files in a directory are from a similar source, or if we are only traversing through one file. This can be used as a "Ctrl+F" to find expressions and sentences containing relevant words in a document. I read about this option for the grep command from the geeksforgeeks webpage https://www.geeksforgeeks.org/grep-command-in-unixlinux/#.
 
     root@DESKTOP-HTAG1J5:/mnt/d/ucsd/y2q1/cse 15l/technical/911report# grep -h "documents" chapter-5.txt
                     to use Yemeni documents to fly to Malaysia, then proceed to the United States using
@@ -62,6 +62,8 @@ The -h command prints out the lines from a document or a directory that match th
                 Once again, the need for travel documents dictated al Qaeda's plans.
                     schemes to keep the pipeline of fraudulent documents flowing. To this end, al Qaeda
                 The operational mission training course taught operatives how to forge documents.
+
+In  this first example, we used grep on the chapter-5 file to look for what it discusses about "documents". The -h command is useful since we already know what the file name will be.
 
     root@DESKTOP-HTAG1J5:/mnt/d/ucsd/y2q1/cse 15l/technical/911report# grep -h -r "fraudulent"
                 2002. Al Qaeda also relied on outside travel facilitators, including fraudulent
@@ -79,7 +81,7 @@ The -h command prints out the lines from a document or a directory that match th
                 to Jordan, having been convicted after 9/11 in a fraudulent driver's license
                 plane ticket to Malaysia and a fraudulent Saudi passport to use for the trip. KSM
 
-In this second example, we used the -r command in conjunction to traverse the entire directory.
+In this second example, we used the -r command in conjunction to traverse the entire directory. This command was useful since we were interested in what the 911report files had to say about fraudulent activities.
 
 
 The -l command returns a list of relevant files containing the ReGex. This can be useful if we'd like to traverse file names for specific content, or just read the entire file if it contains a certain string. I read about this option for the grep command from the geeksforgeeks webpage https://www.geeksforgeeks.org/grep-command-in-unixlinux/#.
