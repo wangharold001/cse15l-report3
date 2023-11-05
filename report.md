@@ -54,7 +54,7 @@ The first reason the code was buggy was that the initial values in the array wer
 
 The grep command returns the results of a search for a RegEx pattern in a directory.
 
-The -h command prints out the lines from a document or a directory that match the RegEx expression. This can be used as a "Ctrl+F" to find expressions and sentences containing relevant words in a document.
+The -h command prints out the lines from a document or a directory that match the RegEx expression. This can be used as a "Ctrl+F" to find expressions and sentences containing relevant words in a document. I read about this option for the grep command from the geeksforgeeks webpage https://www.geeksforgeeks.org/grep-command-in-unixlinux/#.
 
     root@DESKTOP-HTAG1J5:/mnt/d/ucsd/y2q1/cse 15l/technical/911report# grep -h "documents" chapter-5.txt
                     to use Yemeni documents to fly to Malaysia, then proceed to the United States using
@@ -82,7 +82,7 @@ The -h command prints out the lines from a document or a directory that match th
 In this second example, we used the -r command in conjunction to traverse the entire directory.
 
 
-The -l command returns a list of relevant files containing the ReGex. This can be useful if we'd like to traverse file names for specific content, or just read the entire file if it contains a certain string.
+The -l command returns a list of relevant files containing the ReGex. This can be useful if we'd like to traverse file names for specific content, or just read the entire file if it contains a certain string. I read about this option for the grep command from the geeksforgeeks webpage https://www.geeksforgeeks.org/grep-command-in-unixlinux/#.
 
     root@DESKTOP-HTAG1J5:/mnt/d/ucsd/y2q1/cse 15l/technical/911report# grep -l -r "fraudulent"
     chapter-13.4.txt
@@ -107,7 +107,8 @@ The -l command returns a list of relevant files containing the ReGex. This can b
     chapter-7.txt
     chapter-8.txt
 
-The -A n, where n is a number, command prints both the matching line and n lines after. This command can be useful if we are also interested in the contents of a file after a certain expression appears.
+The -A n, where n is a number, command prints both the matching line and n lines after. This command can be useful if we are also interested in the contents of a file after a certain expression appears. I read about this option for the grep command from the geeksforgeeks webpage https://www.geeksforgeeks.org/grep-command-in-unixlinux/#.
+
 
     root@DESKTOP-HTAG1J5:/mnt/d/ucsd/y2q1/cse 15l/technical/911report# grep -A 3 -r "flight schools in"
     chapter-5.txt:                also researched flight schools in Europe, and in the Netherlands he met a flight
@@ -150,7 +151,64 @@ The -A n, where n is a number, command prints both the matching line and n lines
     chapter-8.txt-                interview. She appears to have misunderstood the complex rules that could apply to
     chapter-8.txt-                this situation.
 
+The -n line includes the line numbers when printing out matching lines. This can be useful if we are interested in a pattern exhibited by the frequency of words in a line. Another use case could be if a secret message is sent through the line numbers of a certain word! I read about this option for the grep command from the geeksforgeeks webpage https://www.geeksforgeeks.org/grep-command-in-unixlinux/#.
 
+
+    root@DESKTOP-HTAG1J5:/mnt/d/ucsd/y2q1/cse 15l/technical/911report# grep -n -r "NSLU"
+    chapter-13.5.txt:1008:            81. FBI email, Jane to Steve, NSLU Response, Aug. 29, 2001." Jane" says she only
+    chapter-13.5.txt:1013:                The NSLU attorney denies advising that the agent could not participate in an
+    chapter-13.5.txt:1033:            82. FBI emails between Steve B. and Jane, re: NSLU Response, Aug. 29, 2001. While the
+    chapter-8.txt:733:                (NSLU) on whether he could open a criminal case on Mihdhar.
+    chapter-8.txt:735:            "Jane" sent an email to the Cole case agent explaining that according to the NSLU
+
+        root@DESKTOP-HTAG1J5:/mnt/d/ucsd/y2q1/cse 15l/technical# grep -n -r "regulatory action"
+    government/Gen_Account_Office/d03419sp.txt:146:Sarbanes-Oxley Act of 2002 and other related regulatory actions
+    government/Gen_Account_Office/d03419sp.txt:1155:their ability to take appropriate regulatory actions because
+    government/Gen_Account_Office/June30-2000_gg00135r.txt:73:are, in general, those expected to have a regulatory action within
+    government/Gen_Account_Office/June30-2000_gg00135r.txt:837:or organizations about impending regulatory actions. Passive
+    government/Gen_Account_Office/og96011.txt:281:"significant regulatory action" within the meaning of Executive
+    government/Gen_Account_Office/og96020.txt:120:planned regulatory action document that described the reason for
+    government/Gen_Account_Office/og96022.txt:77:"significant regulatory action" under Executive Order 12866. Since
+    government/Gen_Account_Office/og96022.txt:243:regulatory action." HUD staff advised that, after submission to
+    government/Gen_Account_Office/og96023.txt:170:The rule was determined to be a "significant regulatory action"
+    government/Gen_Account_Office/og96023.txt:175:supplied by the Departments, including a planned regulatory action
+    government/Gen_Account_Office/og96026.txt:52:significant regulatory action" under terms of Executive Order
+    government/Gen_Account_Office/og96026.txt:216:"economically significant regulatory action" within the meaning of
+    government/Gen_Account_Office/og96027.txt:191:"significant regulatory action" within the meaning of Executive
+    government/Gen_Account_Office/og96038.txt:237:The rule was determined to be a "significant regulatory action"
+    government/Gen_Account_Office/og96038.txt:242:information supplied by FDA, including a planned regulatory action
+    government/Gen_Account_Office/og96038.txt:259:Federal agencies to examine regulatory actions to determine if they
+    government/Gen_Account_Office/og96041.txt:291:an economically significant regulatory action under Executive Order
+    government/Gen_Account_Office/og96042.txt:164:"significant regulatory action." The Office of Information and
+    government/Gen_Account_Office/og96042.txt:167:EPA, including a planned regulatory action document describing the
+    government/Gen_Account_Office/og96045.txt:184:"significant regulatory action." The Office of Information and
+    government/Gen_Account_Office/og97003.txt:129:regulatory action for an additional year on the design control
+    government/Gen_Account_Office/og97003.txt:192:regulatory action" under Executive Order No. 12866 requiring review
+    government/Gen_Account_Office/og97003.txt:196:supplied by the FDA, including a planned regulatory action document
+    government/Gen_Account_Office/og97023.txt:125:regulatory action" by OMB under Executive Order No. 12866 and was
+    government/Gen_Account_Office/og97023.txt:128:information supplied by SSA, including a planned regulatory action
+    government/Gen_Account_Office/og97032.txt:141:The interim rule is considered a "significant regulatory action"
+    government/Gen_Account_Office/og97032.txt:147:supplied by INS, including a planned regulatory action document
+    government/Gen_Account_Office/og97038.txt:145:significant" regulatory action by OMB under Executive Order No.
+    government/Gen_Account_Office/og97038.txt:147:supplied by HHS, including a planned regulatory action document
+    government/Gen_Account_Office/og97039.txt:182:regulatory actions by OMB under Executive Order No. 12866. As such,
+    government/Gen_Account_Office/og97039.txt:184:Departments, which included planned regulatory action documents
+    government/Gen_Account_Office/og97041.txt:201:"significant regulatory action." The agency reports that any
+    government/Gen_Account_Office/og97043.txt:179:regulatory action" under Executive Order 12866 and was reviewed by
+    government/Gen_Account_Office/og97045.txt:148:Order 12866 as a "significant regulatory action." The agency
+    government/Gen_Account_Office/og97050.txt:102:that this was an "economically significant regulatory action" under
+    government/Gen_Account_Office/og97050.txt:162:regulatory action under Executive Order 12866 because it could
+    government/Gen_Account_Office/og97051.txt:159:regulatory action" under Executive Order 12866. In accordance with
+    government/Gen_Account_Office/og97052.txt:168:regulatory action" under Executive Order No. 12866 and was reviewed
+    government/Gen_Account_Office/og98022.txt:191:regulatory actions by OMB under Executive Order No. 12866. As such,
+    government/Gen_Account_Office/og98022.txt:193:Departments, which included planned regulatory action documents
+    government/Gen_Account_Office/og98024.txt:132:significant" regulatory action under the Executive Order and was
+    government/Gen_Account_Office/og98030.txt:127:significant" regulatory action by the Office of Management and
+    government/Gen_Account_Office/og98032.txt:143:significant" regulatory action by the Office of Management and
+    government/Gen_Account_Office/og98041.txt:129:significant" regulatory action under Executive Order No. 12866 and
+    government/Gen_Account_Office/og98044.txt:127:significant" regulatory action by the Office of Management and
+    government/Gen_Account_Office/og98045.txt:168:significant" regulatory action by the Office of Management and
+    government/Gen_Account_Office/og98046.txt:136:significant" regulatory action under the Order. It was reviewed by
 
 
 
