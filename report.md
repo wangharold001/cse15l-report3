@@ -120,3 +120,37 @@ The -A n, where n is a number, command prints both the matching line and n lines
     chapter-7.txt-                California, and Arizona; and he briefly started at a couple of them before returning
     chapter-7.txt-                to Saudi Arabia. In 1997, he returned to Florida and then, along with two friends,
     chapter-7.txt-                went back to Arizona and began his flight training there in earnest. After about
+
+
+    root@DESKTOP-HTAG1J5:/mnt/d/ucsd/y2q1/cse 15l/technical/911report# grep -A 5 -r "NSLU"
+    chapter-13.5.txt:            81. FBI email, Jane to Steve, NSLU Response, Aug. 29, 2001." Jane" says she only
+    chapter-13.5.txt-                asked whether there was sufficient probable cause to open the matter as a criminal
+    chapter-13.5.txt-                case and whether the criminal agent could attend any interview if Mihdhar was found.
+    chapter-13.5.txt-                She said the answer she received to both questions was no. She did not ask whether
+    chapter-13.5.txt-                the underlying information could have been shared. Jane interview ( July 13, 2004).
+    chapter-13.5.txt:                The NSLU attorney denies advising that the agent could not participate in an
+    chapter-13.5.txt-                interview and notes that she would not have given such inaccurate advice. The
+    chapter-13.5.txt-                attorney told investigators that the NSA caveats would not have precluded criminal
+    chapter-13.5.txt-                agents from joining in any search for Mihdhar or from participating in any
+    chapter-13.5.txt-                interview. Moreover, she said that she could have gone to the NSA and obtained a
+    chapter-13.5.txt-                waiver of any such caveat because there was no FISA information involved in this
+    --
+    chapter-13.5.txt:            82. FBI emails between Steve B. and Jane, re: NSLU Response, Aug. 29, 2001. While the
+    chapter-13.5.txt-                agent expressed his frustration with the situation to "Jane," he made no effort to
+    chapter-13.5.txt-                press the matter further by discussing his concerns with either his supervisor or
+    chapter-13.5.txt-                the chief division counsel in New York.
+    chapter-13.5.txt-            83. Attorney General Ashcroft testified to us that this and similar
+    chapter-13.5.txt-                information-sharing issues arose from Attorney General Reno's 1995 guidelines,
+    --
+    chapter-8.txt:                (NSLU) on whether he could open a criminal case on Mihdhar.
+    chapter-8.txt-
+    chapter-8.txt:                "Jane" sent an email to the Cole case agent explaining that according to the NSLU,
+    chapter-8.txt-                the case could be opened only as an intelligence matter, and that if Mihdhar was
+    chapter-8.txt-                found, only designated intelligence agents could conduct or even be present at any
+    chapter-8.txt-                interview. She appears to have misunderstood the complex rules that could apply to
+    chapter-8.txt-                this situation.
+
+
+
+
+
