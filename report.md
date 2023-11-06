@@ -93,6 +93,8 @@ The -l command returns a list of relevant files containing the ReGex. This can b
     chapter-5.txt
     chapter-6.txt
     chapter-7.txt
+
+In this first example, we traversed the 911report directory for any file that contained the word "fraudulent" in it. In this case, the command was useful if we want to identify any file that contains discussion of fraudulent documents.
     
     root@DESKTOP-HTAG1J5:/mnt/d/ucsd/y2q1/cse 15l/technical/911report# grep -l -r "Ladin"
     chapter-10.txt
@@ -109,6 +111,8 @@ The -l command returns a list of relevant files containing the ReGex. This can b
     chapter-7.txt
     chapter-8.txt
 
+In this second example, we traversed the directory for a file discussing "Ladin". Clearly, we showed that it is every file due to Bin Ladin's primary involvement in the planning of 9/11.
+
 The -A n, where n is a number, command prints both the matching line and n lines after. This command can be useful if we are also interested in the contents of a file after a certain expression appears. I read about this option for the grep command from the geeksforgeeks webpage https://www.geeksforgeeks.org/grep-command-in-unixlinux/#.
 
 
@@ -124,6 +128,7 @@ The -A n, where n is a number, command prints both the matching line and n lines
     chapter-7.txt-                to Saudi Arabia. In 1997, he returned to Florida and then, along with two friends,
     chapter-7.txt-                went back to Arizona and began his flight training there in earnest. After about
 
+In this first example, we queried for flight schools, since we were curious about the location and involvement of different flight schools in relation to 9/11.
 
     root@DESKTOP-HTAG1J5:/mnt/d/ucsd/y2q1/cse 15l/technical/911report# grep -A 5 -r "NSLU"
     chapter-13.5.txt:            81. FBI email, Jane to Steve, NSLU Response, Aug. 29, 2001." Jane" says she only
@@ -153,6 +158,8 @@ The -A n, where n is a number, command prints both the matching line and n lines
     chapter-8.txt-                interview. She appears to have misunderstood the complex rules that could apply to
     chapter-8.txt-                this situation.
 
+In this second example, we queried for NSLU and 5 lines afterwards discussing it. This was useful since we wanted context and information about the NSLU and what it did. If we had not asked for the 5 lines, we would not have learned a lot about the NSLU's activities.
+
 The -n line includes the line numbers when printing out matching lines. This can be useful if we are interested in a pattern exhibited by the frequency of words in a line. Another use case could be if a secret message is sent through the line numbers of a certain word! I read about this option for the grep command from the geeksforgeeks webpage https://www.geeksforgeeks.org/grep-command-in-unixlinux/#.
 
 
@@ -162,6 +169,8 @@ The -n line includes the line numbers when printing out matching lines. This can
     chapter-13.5.txt:1033:            82. FBI emails between Steve B. and Jane, re: NSLU Response, Aug. 29, 2001. While the
     chapter-8.txt:733:                (NSLU) on whether he could open a criminal case on Mihdhar.
     chapter-8.txt:735:            "Jane" sent an email to the Cole case agent explaining that according to the NSLU
+
+In this example, we queried again for the "NSLU", but by printing out the specific lines, we can go into the specific documents and continue reading at the relevant lines instead of reading only n lines afterwards in the terminal. It allows us to read exactly as much after the matching string as we would like.
 
         root@DESKTOP-HTAG1J5:/mnt/d/ucsd/y2q1/cse 15l/technical# grep -n -r "regulatory action"
     government/Gen_Account_Office/d03419sp.txt:146:Sarbanes-Oxley Act of 2002 and other related regulatory actions
@@ -212,5 +221,5 @@ The -n line includes the line numbers when printing out matching lines. This can
     government/Gen_Account_Office/og98045.txt:168:significant" regulatory action by the Office of Management and
     government/Gen_Account_Office/og98046.txt:136:significant" regulatory action under the Order. It was reviewed by
 
-
+In this second example, we queried for the line numbers of the string "regulatory action". This allows us to find the specific lines and, as a result, statutes relating to the necessity of regulatory action. We can then go into the specific documents and read what is said about the regulatory action.
 
